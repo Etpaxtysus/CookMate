@@ -6,14 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- SearchView for searching recipes -->
+    <android.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:queryHint="Search recipes..."
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ListView for displaying the recipe list -->
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/listview"
-        android:scrollbars="vertical"
-        android:layout_marginTop="12dp"
-        tools:listitem="@layout/list_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"/>
+        android:dividerHeight="10.0sp"
+        android:layout_marginTop="40dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
