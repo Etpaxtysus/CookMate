@@ -104,4 +104,5 @@
 \n4. Serve hot with ketchup, mayo, or your favorite dipping sauce.</string>
 
     <string name="title_activity_detailed">Recipe Detail</string>
+    <string name="title_activity_favorite_recipes">Favorite Recipe</string>
 </resources>
