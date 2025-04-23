@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             R.string.friesDesc
         )
         val nameList = arrayOf("Pasta", "Maggi", "Cake", "Pancake", "Pizza", "Burgers", "Fries")
-        val timeList = arrayOf("30 mins", "2 mins", "45 mins", "10 mins", "60 mins", "45 mins", "30 mins")
+        val timeList = arrayOf("25 mins", "5 mins", "60 mins", "20 mins", "25 mins", "25 mins", "30 mins")
 
         for (i in imageList.indices) {
             val listData = ListData(
