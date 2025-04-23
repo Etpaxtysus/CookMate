@@ -26,7 +26,6 @@
             android:layout_marginTop="10dp"/>
 <!--            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"-->
 
-
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
@@ -48,7 +47,6 @@
             android:layout_marginTop="25dp"
             android:layout_marginStart="100dp"
             android:textColor="@color/lavender"/>
-
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
