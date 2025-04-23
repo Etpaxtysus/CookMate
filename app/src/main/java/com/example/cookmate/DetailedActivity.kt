@@ -1,31 +1,33 @@
 package com.example.cookmate
 
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cookmate.databinding.ActivityDetailBinding
 
 class DetailedActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_detail)
 
+        val name = intent.getStringExtra("name")
+        val time = intent.getStringExtra("time")
+        val ingredients = intent.getIntExtra("ingredients", 0)
+        val desc = intent.getIntExtra("desc", 0)
+        val image = intent.getIntExtra("image", 0)
 
-        val intent = this.intent
-        if (intent != null) {
-            val name = intent.getStringExtra("name")
-            val time = intent.getStringExtra("time")
-            val ingredients = intent.getIntExtra("ingredients", R.string.maggiIngredients)
-            val desc = intent.getIntExtra("desc", R.string.maggieDesc)
-            val image = intent.getIntExtra("image", R.drawable.maggi)
+        val nameTextView = findViewById<TextView>(R.id.detailName)
+        val timeTextView = findViewById<TextView>(R.id.detailTime)
+        val ingredientsTextView = findViewById<TextView>(R.id.detailIngredients)
+        val descTextView = findViewById<TextView>(R.id.detailDesc)
+        val imageView = findViewById<ImageView>(R.id.detailImage)
 
-            binding.detailName.text = name
-            binding.detailTime.text = time
-            binding.detailDesc.setText(desc)
-            binding.detailIngredients.setText(ingredients)
-            binding.detailImage.setImageResource(image)
-        }
+        nameTextView.text = name
+        timeTextView.text = time
+        ingredientsTextView.text = getString(ingredients)
+        descTextView.text = getString(desc)
+        imageView.setImageResource(image)
     }
 }

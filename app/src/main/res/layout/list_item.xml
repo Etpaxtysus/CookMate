@@ -23,30 +23,42 @@
             android:scaleType="centerCrop"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"/>
-<!--            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"-->
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true" />
 
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:id="@+id/listName"
-            android:text="Name"
-            android:textColor="@color/lavender"
-            android:textSize="20sp"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@id/listImage"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/listImage"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true">
 
-        <TextView
-            android:layout_width="80dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listName"
+                android:text="Name"
+                android:textColor="@color/lavender"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listTime"
+                android:text="time"
+                android:textSize="12sp"
+                android:textColor="@color/lavender" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/favoriteIcon"
+            android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/listTime"
-            android:text="time"
-            android:textSize="16sp"
-            android:layout_toEndOf="@id/listName"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="100dp"
-            android:textColor="@color/lavender"/>
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/unstarred" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

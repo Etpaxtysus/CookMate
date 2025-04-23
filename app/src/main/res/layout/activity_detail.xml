@@ -6,91 +6,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".DetailedActivity">
 
+    <!-- Nama Resep -->
     <TextView
+        android:id="@+id/detailName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/detailName"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         android:text="Recipe Name"
         android:textSize="24sp"
         android:textColor="@color/lavender"
         android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" />
 
+    <!-- Gambar Resep -->
     <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="200dp"
         android:id="@+id/cardImage"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp">
 
         <ImageView
-            android:layout_width="380dp"
-            android:layout_height="200dp"
             android:id="@+id/detailImage"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:src="@drawable/maggi"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop" />
 
     </androidx.cardview.widget.CardView>
 
+    <!-- Durasi Memasak -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Duration:"
         android:textColor="@color/lavender"
         android:textStyle="bold"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/detailTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="time"
-        android:layout_marginStart="10dp"
-        android:textSize="16sp"
-        android:id="@+id/detailTime"/>
+        android:textSize="16sp" />
 
+    <!-- Bahan-Bahan -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Ingredients:"
         android:textColor="@color/lavender"
         android:textStyle="bold"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/detailIngredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/maggiIngredients"
-        android:layout_marginStart="10dp"
-        android:textSize="16sp"
-        android:id="@+id/detailIngredients"/>
+        android:textSize="16sp" />
 
+    <!-- Langkah-Langkah -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Steps:"
         android:textColor="@color/lavender"
         android:textStyle="bold"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/detailDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/maggieDesc"
-        android:layout_marginStart="10dp"
-        android:textSize="16sp"
-        android:id="@+id/detailDesc"/>
+        android:textSize="16sp" />
 
 </LinearLayout>

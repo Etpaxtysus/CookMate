@@ -82,5 +82,6 @@ Add the maggi masala on to it
 \nWait for 2 mins
 \nMaggi is ready!</string>
     <string name="title_activity_detailed">Recipe Detail</string>
+    <string name="title_activity_favorite_recipes">Favorite Recipe</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.cookmate
+import java.io.Serializable
 
 class ListData(
     var name: String,
@@ -7,4 +7,4 @@ class ListData(
     var desc: Int,
     var image: Int,
     var isFavorite: Boolean = false
-)
+) : Serializable
